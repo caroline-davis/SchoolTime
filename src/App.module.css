@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+  height: 500px;
+  flex-direction: column;
+  background-color: lightsalmon;
+  align-items: center;
+  justify-content: first baseline;
+}
+
+.header {
+  display: flex;
+  height: 100px;
+  width:100%;
+  background-color: cadetblue;
+  margin-bottom: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: darkslategray;
+  font-family: 'Pacifico', cursive;
+  font-size: 40px
+}
+
+.input {
+  height: 50px;
+  width: 33.3%;
+  background-color: paleturquoise;
+  font-size: 20px;
+  font-family: 'Arimo', sans-serif;
+  margin: 2px;
+  color: darkslategray;
+}
+
+input:focus {
+  outline-color: lightskyblue;
+}
+
+button {
+  margin-bottom: 10px;
+  background-color: lightgray;
+  font-family: 'Arimo', sans-serif;
+  font-weight: 800;
+  color: darkslategray;
+}
