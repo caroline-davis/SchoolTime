@@ -1,0 +1,16 @@
+
+.input {
+    height: 50px;
+    width: 33.3%;
+    background-color: paleturquoise;
+    font-size: 20px;
+    font-family: 'Arimo', sans-serif;
+    margin: 2px;
+    color: darkslategray;
+    padding-left: 3px;
+  }
+  
+  input:focus {
+    outline-color: lightskyblue;
+  }
+  

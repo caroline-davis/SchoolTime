@@ -22,21 +22,6 @@ h1 {
   font-family: 'Pacifico', cursive;
   font-size: 40px
 }
-
-.input {
-  height: 50px;
-  width: 33.3%;
-  background-color: paleturquoise;
-  font-size: 20px;
-  font-family: 'Arimo', sans-serif;
-  margin: 2px;
-  color: darkslategray;
-}
-
-input:focus {
-  outline-color: lightskyblue;
-}
-
 button {
   margin-bottom: 10px;
   background-color: lightgray;

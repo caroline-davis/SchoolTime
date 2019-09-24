@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
 import styles from './App.module.css';
+import Input from './components/Input.js';
 
 function App() {
 
 const [student, setStudent] = useState("")
-const [students, setStudents] = useState([""])
+const [students, setStudents] = useState([])
 
 const [teacherName, setTeacherName] = useState("")
 const [teacherSubject, setTeacherSubject] = useState("")
@@ -16,42 +17,36 @@ const [teachers, setTeachers] = useState([])
       <div className={styles.header}>
         <h1>School Time</h1>
       </div>
-      <input type="text"
-              placeholder="student name"
-              className={styles.input}
+      <Input placeholder="student name"
               value={student}
-              onChange={(e) => setStudent(e.target.value)}>
-      </input>
+              onChange={setStudent}>
+      </Input>
+
       <button onClick={()=> setStudents([...students, student])}>SAVE STUDENT</button>
-      <input type="text"
-             placeholder="teachers name"
-             className={styles.input}
+      
+      <Input placeholder="teachers name"
              value={teacherName}
-             onChange={(e) => setTeacherName(e.target.value)}>
-      </input>
-      <input type="text"
-             placeholder="class subject"
-             className={styles.input}
+             onChange={setTeacherName}>
+      </Input>
+      <Input placeholder="class subject"
              value={teacherSubject}
-             onChange={(e)=> setTeacherSubject(e.target.value)}>
-      </input>
-      <input type="text"
-             placeholder="teachers class"
-             className={styles.input}
+             onChange={setTeacherSubject}>
+      </Input>
+      <Input placeholder="teachers class"
              value={teacherClass}
-             onChange={(e) => setTeacherClass(e.target.value)}>
-      </input>
+             onChange={setTeacherClass}>
+      </Input>
       <button onClick={() => setTeachers([...teachers, {name: teacherName, subject: teacherSubject, class: teacherClass} ])}>SAVE TEACHER</button>
 
         {students.map((s, index) => 
         <div key={index}>
-          {s}
+          Student: {s}
         </div>
           )}
         {teachers.map((t, index) => 
         <div key={index}>
-          Name: {t.name}
-          Subject: {t.subject} 
+          Name: {t.name}{" "}
+          Subject: {t.subject}{" "}
           Class: {t.class}
         </div>
         )}
